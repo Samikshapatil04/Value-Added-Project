@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://wallpaperbat.com/img/193621-super-car-wallpaper-top-free-super-car-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .box{
+            height: 70vh;
+            width: 90vh;
+            background-color: rgba(131, 237, 131, 0.363);
+            margin-left: 450px;
+            box-shadow: 0 0 10px rgb(247, 246, 251);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sell Your Car</h1>
+    </header>
+    <div class="box">
+    <main>
+        <form action="submit.php" method="POST">
+            <label for="make">Car Make:</label>
+            <input type="text" id="make" name="make" required>
+            <label for="model">Car Model:</label>
+            <input type="text" id="model" name="model" required>
+            <label for="year">Year:</label>
+            <input type="number" id="year" name="year" min="1900" max="2099" required>
+            <label for="price">Asking Price:</label>
+            <input type="number" id="price" name="price" min="0" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</div>
+    <footer>
+        &copy; 2024 CarTrader. All rights reserved.
+    </footer>
+</body>
+</html>
